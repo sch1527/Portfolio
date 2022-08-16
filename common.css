@@ -1,0 +1,407 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+
+@font-face {
+    font-family: 'GongGothicMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 스크롤바 없애기 */
+html {
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+:root {
+    --main-color: #fff;
+    --sub-color: #FFFF00;
+}
+
+/* 애니메이션되는 배경색 전환 */
+section {
+    background: linear-gradient(141deg, #3067d4, #d0498a);
+    background-size: 400% 400%;
+    animation: bgAni 14s ease infinite;
+    height: 100vh;
+}
+
+@keyframes bgAni {
+    0% {
+        background-position: 0% 2%
+    }
+
+    50% {
+        background-position: 100% 99%
+    }
+
+    100% {
+        background-position: 0% 2%
+    }
+}
+
+/* 헤더 */
+#header {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    font-family: 'GongGothicMedium';
+    z-index: 100;
+}
+
+#header .inner {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#header h1 {
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+}
+
+#header .gnb {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header .gnb li {
+    position: relative;
+}
+
+#header .gnb li:hover a {
+    color: var(--sub-color);
+}
+
+#header .gnb li.on a {
+    color: var(--sub-color);
+}
+
+#header .gnb li a {
+    font-size: 1.5rem;
+    padding: 0 2rem;
+    transition: 0.5s;
+}
+
+#header .gnb li a::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--sub-color);
+    border-radius: 50%;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#header .gnb li a.on::before {
+    opacity: 1;
+}
+
+/* 햄버거 버튼 꾸미기 */
+#header .ham {
+    position: relative;
+    width: 40px;
+    display: none;
+}
+#header .ham::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -30%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 5px solid white;
+}
+#header .ham span {
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    width: 100%;
+    transform: translateY(-50%);
+    border-top: 5px solid white;
+    border-radius: 5px;
+}
+#header .ham span:nth-of-type(1) {
+    top: calc(50% - 12px);
+}
+#header .ham span:nth-of-type(3) {
+    top: calc(50% + 12px);
+}
+
+/* 햄버거 메뉴 */
+#header .ham_menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    
+}
+/* header에 백그라운드 넣기 */
+.header_bg {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    opacity: 20%;
+    z-index: 100;
+}
+
+.sec1 {
+    color: var(--main-color);
+    position: relative;
+}
+
+.sec1>* {
+    position: absolute;
+}
+
+.sec1 .comment {
+    font-size: 36px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 1.6;
+}
+
+.sec1 .comment .slow {
+    color: #F6F282;
+}
+
+.sec1 .comment .steadily {
+    color: #94FFC2;
+}
+
+.sec1 .circle_box {
+    top: 50%;
+    width: 300px;
+    height: 300px;
+    transform: translateY(-50%);
+}
+
+.sec1 .circle_box .circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #333, #fff) no-repeat;
+    background-size: 400%;
+    border-radius: 40% 60% 40% 60%;
+    opacity: 0.6;
+}
+
+.sec1 .circle_box .circle:nth-child(1) {
+    animation: move_circle1 15s alternate linear infinite;
+    top: -70%;
+    width: 80%;
+    height: 80%;
+}
+
+@keyframes move_circle1 {
+    0% {
+        left: 30%;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        left: 250%;
+    }
+}
+
+.sec1 .circle_box .circle:nth-child(2) {
+    width: 150%;
+    height: 150%;
+    border-radius: 50%;
+    animation: move_circle2 30s alternate linear infinite;
+}
+
+@keyframes move_circle2 {
+    0% {
+        top: 120%;
+        left: -100%;
+    }
+
+    25% {
+        top: 100%;
+        left: -70%;
+    }
+
+    50% {
+        top: 80%;
+        left: -40%;
+    }
+
+    75% {
+        top: 60%;
+        left: -10%;
+    }
+
+    100% {
+        top: 40%;
+        left: 20%;
+    }
+}
+
+.sec1 .scroll_down {
+    bottom: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sec1 .scroll_down a {
+    font-size: 14px;
+    position: relative;
+}
+
+.sec1 .scroll_down a::before {
+    content: '';
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 30px;
+    border-right: 1px solid white;
+    animation: scroll_down 1.5s ease-in-out alternate infinite;
+}
+
+@keyframes scroll_down {
+    0% {
+        top: 120%;
+    }
+
+    100% {
+        top: 180%;
+    }
+}
+
+.sec1 .pagination {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: calc(60px + 48px);
+    z-index: 10;
+}
+
+.sec1 .pagination span {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+}
+
+.sec1 .pagination span.on {
+    background-color: var(--sub-color);
+}
+
+
+@media(max-width:1005px) {
+    #header h1 {
+        padding: 1.7rem;
+    }
+    #header .gnb {
+        display: none;
+    }
+    #header .ham {
+        display: block;
+    }
+    .sec1 .comment {
+        font-size: 1.5rem;
+    }
+    .sec1 .scroll_down a {
+        font-size: 12px;
+    }
+    .sec1 .circle_box .circle:nth-child(1) {
+        width: 30%;
+        height: 30%;
+        top: -30%;
+        animation: move_circle1 10s alternate linear infinite;
+    }
+    @keyframes move_circle1 {
+        0% {
+            left: 30%;
+        }
+    
+        100% {
+            transform: rotate(360deg);
+            left: 100%;
+        }
+    }
+    .sec1 .circle_box .circle:nth-child(2) {
+        width: 75%;
+        height: 75%;
+        border-radius: 50%;
+        animation: move_circle2 15s alternate linear infinite;
+    }
+    
+    @keyframes move_circle2 {
+        0% {
+            top: 120%;
+            left: -50%;
+        }
+    
+        25% {
+            top: 100%;
+            left: -30%;
+        }
+    
+        50% {
+            top: 80%;
+            left: -10%;
+        }
+    
+        75% {
+            top: 60%;
+            left: 10%;
+        }
+    
+        100% {
+            top: 40%;
+            left: 30%;
+        }
+    }
+}
+@media(max-width:672px) {
+    .sec1 .comment {
+        width: 120%;
+    }
+}

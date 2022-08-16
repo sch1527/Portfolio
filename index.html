@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="common.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer">
+    </script>
+    <script src="common.js"></script>
+    <title>ChangHyeon's Portfolio</title>
+</head>
+
+<body>
+    <!-- header에 백그라운드 넣기 -->
+    <div class="header_bg"></div>
+    <!-- 메인 화면 -->
+    <header id="header">
+        <div class="inner">
+            <h1><a href="#"><img src="./img/logo.png" alt="로고"></a></h1>
+            <nav>
+                <ul class="gnb">
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#portfolio">PORTFOLIO</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+            <nav class="ham">
+                <span></span>
+                <span></span>
+                <span></span>
+            </nav>
+        </div>
+        <nav class="ham_menu">
+            <button class="close"><i class="fa-solid fa-xmark"></i></button>
+        </nav>
+    </header>
+    <section class="sec1">
+        <h2 class="comment">
+            웹 퍼블리셔는 운동처럼<br>
+            "<span class="slow">천천히</span>, 하지만 <span class="steadily">꾸준히</span> 성장하는"<br>
+            직업이라고 생각합니다.
+        </h2>
+        <div class="circle_box">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="scroll_down">
+            <a href="#about">Scroll Down</a>
+        </div>
+        <div class="pagination">
+            <a href="#"><span class="on"></span></a>
+            <a href="#about"><span></span></a>
+            <a href="#portfolio"><span></span></a>
+            <a href="#contact"><span></span></a>
+        </div>
+    </section>
+    <section id="about">
+        <h3>저는 이런 삶을 살아왔어요</h3>
+        <div class="name">
+            <p>이름 :</p>
+            <span>손창현</span>
+        </div>
+        <div class="birth">
+            <p>생년월일 :</p>
+            <span>1996.08.07(27세)</span>
+        </div>
+        <div class="life">
+            <p>
+                저는 학창시절부터 컴퓨터에 관심이 많아 대학교 졸업 이후<br>
+                웹 퍼블리셔 양성과정 학원을 다니며 웹 퍼블리셔의 꿈을 키웠습니다.
+                배움에 끝이 없는 만큼, 현재에 안주하지 않고 꾸준히 배우며 성장하겠습니다.
+            </p>
+        </div>
+        <div class="wrap">
+            <div class="skills">
+                <p>Skills</p>
+            </div>
+            <div class="license">
+                <p>License</p>
+            </div>
+            <div class="education">
+                <p>Education</p>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio"></section>
+    <section id="contact"></section>
+</body>
+
+</html>
