@@ -21,6 +21,12 @@ $(function () {
                 $('#header .gnb>li>a').removeClass('on')
             }
         }
+        // 두 번째 화면의 텍스트 효과
+        if (scTop >= ht * 1 && scTop < ht * 2) {
+            $('#about h3').addClass('on')
+        } else {
+            $('#about h3').removeClass('on')
+        }
     })
 
     let elm = "section"
@@ -56,4 +62,17 @@ $(function () {
             }, 0)
         })
     })
+    $('#header .ham').click(function() {
+        $(this).toggleClass('on')
+        $('#header .ham_menu').toggleClass('on')
+    })
+    $('#header .ham_menu .close').click(function() {
+        $('#header .ham').toggleClass('on')
+        $('#header .ham_menu').toggleClass('on')
+    })
+    $('#header .ham_menu a').click(function() {
+        $('#header .ham').removeClass('on')
+        $('#header .ham_menu').removeClass('on')
+    })
+    
 })
