@@ -452,6 +452,7 @@ section {
 #about .wrap ul li .skills>div:hover img {
     top: -450%;
     left: 750%;
+    transform: rotate(1080deg);
 }
 
 #about .wrap ul li .skills img {
@@ -480,7 +481,6 @@ section {
     display: block;
     top: -340%;
     left: 750%;
-    transform: rotate(360deg);
 }
 
 #about .wrap ul li .skills span {
