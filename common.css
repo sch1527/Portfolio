@@ -45,7 +45,7 @@ section {
     background-size: 400% 400%;
     animation: bgAni 14s ease infinite;
     height: 100vh;
-    /* position: relative; */
+    overflow: hidden;
 }
 
 @keyframes bgAni {
@@ -155,15 +155,19 @@ section {
     border-top: 5px solid white;
     border-radius: 5px;
 }
+
 #header .ham span:nth-of-type(1) {
     top: calc(50% - 12px);
 }
+
 #header .ham span:nth-of-type(3) {
     top: calc(50% + 12px);
 }
+
 #header .ham_menu {
     display: none;
 }
+
 /* header에 백그라운드 넣기 */
 .header_bg {
     position: fixed;
@@ -174,6 +178,7 @@ section {
     opacity: 20%;
     z-index: 100;
 }
+
 /* 메인 화면 */
 .sec1 {
     color: var(--main-color);
@@ -333,11 +338,13 @@ section {
 #about {
     color: white;
 }
+
 #about .inner {
     max-width: 1400px;
     margin: auto;
     position: relative;
 }
+
 #about .inner::before {
     content: '';
     position: absolute;
@@ -345,27 +352,32 @@ section {
     width: 100%;
     border-bottom: 1px dashed white;
 }
-#about .inner > * {
+
+#about .inner>* {
     position: absolute;
 }
+
 #about .title {
     top: calc(100px + 3rem);
     left: 50%;
     transform: translateX(-50%);
 }
+
 #about h3 {
     width: 19.5ch;
     overflow: hidden;
     white-space: nowrap;
     font-size: 42px;
     animation: typing 3s steps(200),
-    cursor 1s linear infinite;
+        cursor 1s linear infinite;
     position: relative;
     display: none;
 }
+
 #about h3.on {
     display: block;
 }
+
 #about p,
 #about span {
     font-size: 26px;
@@ -378,56 +390,133 @@ section {
         width: 0;
     }
 }
+
 /* 커서 깜빡임 효과 */
 @keyframes cursor {
     0% {
         border-right: none;
     }
+
     100% {
         border-right: 1px solid white;
     }
 }
+
 #about .name,
 #about .birth {
     line-height: 35px;
 }
+
 #about .name {
     top: calc(100px + 10rem);
+    animation: name_ani 1s linear;
+    animation-delay: 3000ms;
+    animation-fill-mode: forwards;
+    left: -50%;
+    display: none;
 }
+
+#about .name.on {
+    display: block;
+}
+
+@keyframes name_ani {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        left: 0;
+        opacity: 1;
+        transform: rotate(720deg);
+    }
+}
+
 #about .birth {
     top: calc(100px + 16rem);
+    animation: birth_ani 1s linear;
+    animation-delay: 4000ms;
+    animation-fill-mode: forwards;
+    left: -50%;
+    display: none;
 }
+#about .birth.on {
+    display: block;
+}
+
+@keyframes birth_ani {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
 #about .life {
-    top: calc(100px + 23rem);
+    top: calc(100px + 22rem);
+    animation: life_ani 1.3s linear;
+    animation-delay: 5000ms;
+    animation-fill-mode: forwards;
+    left: -80%;
+    display: none;
 }
+#about .life.on {
+    display: block;
+}
+@keyframes life_ani {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
 #about .life p {
     font-size: 24px;
     line-height: 35px;
 }
+
 #about .wrap {
-    top: calc(100px + 35rem);
+    top: calc(100px + 32rem);
     width: 100%;
 }
+
 #about .wrap ul {
     display: flex;
     justify-content: space-between;
 }
+
 #about .wrap ul li {
     position: relative;
 }
+
 #about .wrap ul li:nth-of-type(1) {
     width: 15%;
 }
+
 #about .wrap ul li:nth-of-type(2) {
     width: 30%;
 }
+
 #about .wrap ul li:nth-of-type(3) {
     width: 45%;
 }
+
 #about .wrap ul li>p {
     text-align: center;
     font-weight: 400;
 }
+
+#about .wrap ul li .skill_wrap p {
+    position: absolute;
+    top: -40px;
+}
+
 #about .wrap ul li>div {
     position: absolute;
     top: 40px;
@@ -436,11 +525,13 @@ section {
     border: 2px solid white;
     border-radius: 16px;
 }
+
 #about .wrap ul li .skills {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
 }
+
 #about .wrap ul li .skills>div {
     top: 0;
     left: 0;
@@ -463,6 +554,7 @@ section {
     margin: 1rem;
     transition: 1s;
 }
+
 #about .wrap ul li .skills p {
     position: absolute;
     top: 170px;
@@ -477,6 +569,7 @@ section {
     display: none;
     transition: 0.7s;
 }
+
 #about .wrap ul li .skills>div:hover p {
     display: block;
     top: -340%;
@@ -489,21 +582,47 @@ section {
     font-weight: 300;
     display: block;
     width: 100%;
-    bottom: -30px;
+    bottom: -40px;
     cursor: default;
     text-align: center;
 }
+
 #about .wrap ul li .license,
 #about .wrap ul li .education {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
+
 #about .wrap ul li .license p,
 #about .wrap ul li .education p {
     font-size: 20px;
     text-align: center;
 }
+
+#about .wrap ul {
+    animation: ul_ani 1.5s linear;
+    animation-delay: 6000ms;
+    animation-fill-mode: forwards;
+    padding-top: 20rem;
+    display: none;
+}
+#about .wrap ul.on {
+    display: flex;
+}
+@keyframes ul_ani {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        padding-top: 0;
+    }
+}
+#about .btn_close {
+    display: none;
+}
+
 /* 반응형 */
 @media(max-width:1005px) {
     #header h1 {
@@ -519,6 +638,7 @@ section {
         z-index: 100;
         cursor: pointer;
     }
+
     #header .ham.on {
         display: none;
     }
@@ -547,11 +667,13 @@ section {
         padding: 1.5rem 0;
         text-align: center;
     }
+
     #header .ham_menu ul li a {
         position: relative;
         font-size: 3.5rem;
         transition: 0.3s;
     }
+
     #header .ham_menu ul li a:hover {
         border-bottom: 5px solid #FFFF00;
     }
@@ -563,10 +685,12 @@ section {
         font-size: 3rem;
         padding: 1.5rem;
     }
+
     #header .ham_menu .close i {
         cursor: pointer;
         transition: 0.5s;
     }
+
     #header .ham_menu .close i:hover {
         transform: rotate(360deg);
     }
@@ -630,6 +754,88 @@ section {
             left: 30%;
         }
     }
+
+    #about .inner::before {
+        top: calc(100px + 6rem);
+    }
+
+    #about .name,
+    #about .birth,
+    #about .life {
+        animation: none;
+    }
+
+    #about .name {
+        top: calc(100px + 7rem);
+        left: 2rem;
+        padding-left: 0 !important;
+    }
+
+    #about .birth {
+        top: calc(100px + 7rem);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #about .life {
+        top: calc(100px + 12rem);
+        left: 2rem;
+        padding-left: 0 !important;
+    }
+
+    #about .title {
+        top: calc(100px + 2rem);
+    }
+
+    #about .title h3 {
+        font-size: 30px;
+    }
+
+    #about .wrap {
+        top: calc(100px + 20rem) !important;
+        width: 117%;
+    }
+
+    #about .wrap ul {
+        width: 75%;
+        padding-top: 0 !important;
+        padding-right: 0 !important;
+        animation: none;
+    }
+
+    #about .wrap ul li {
+        height: 250px;
+    }
+
+    #about .wrap ul li:nth-of-type(1) {
+        width: 25%;
+    }
+
+    #about .wrap ul li:nth-of-type(2) {
+        width: 30%;
+    }
+
+    #about .wrap ul li:nth-of-type(3) {
+        width: 40%;
+    }
+
+    #about .wrap ul li .skills img {
+        width: 50%;
+    }
+
+    #about .wrap ul li .skills>div:hover img {
+        top: 0;
+        left: 0;
+        transform: rotate(0deg);
+    }
+    #about .wrap ul li .skills>div:hover p {
+        display: none;
+    }
+
+    #about .wrap ul li .license,
+    #about .wrap ul li .education {
+        padding: 1rem;
+    }
 }
 
 @media(max-width:672px) {
@@ -637,8 +843,44 @@ section {
         width: 120%;
     }
 }
+
 @media(max-width:1450px) {
-    #header .inner {
+    .inner {
         padding: 0 2rem;
     }
+
+    #about h3 {
+        font-size: 36px;
+    }
+
+    #about .wrap ul li>p {
+        font-size: 18px;
+    }
+    #about .name,
+    #about .birth,
+    #about .life {
+        padding-left: 2rem;
+    }
+
+    #about .name p,
+    #about .name span,
+    #about .birth p,
+    #about .birth span,
+    #about .life p {
+        font-size: 18px;
+    }
+
+    #about .wrap {
+        top: calc(100px + 30rem);
+    }
+    #about .wrap ul {
+        padding-top: 25rem;
+        padding-right: 3rem;
+    }
+
+    #about .wrap ul li .license p,
+    #about .wrap ul li .education p {
+        font-size: 16px;
+    }
+
 }

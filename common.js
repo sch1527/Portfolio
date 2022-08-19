@@ -24,11 +24,28 @@ $(function () {
         // 두 번째 화면의 텍스트 효과
         if (scTop >= ht * 1 && scTop < ht * 2) {
             $('#about h3').addClass('on')
+            $('#about .name').addClass('on')
+            $('#about .birth').addClass('on')
+            $('#about .life').addClass('on')
+            $('#about .wrap ul').addClass('on')
         } else {
             $('#about h3').removeClass('on')
+            $('#about .name').removeClass('on')
+            $('#about .birth').removeClass('on')
+            $('#about .life').removeClass('on')
+            $('#about .wrap ul').removeClass('on')
         }
     })
-
+    // 윈도우 크기가 변경되었을 때
+    $(window).resize(function() {
+        let wid = $(window).width()
+        // width가 1005이하일 때 텍스트 변경
+        if (wid <= 1005) {
+            $('#about .skills span').text('* 이미지를 클릭해보세요!')
+        } else {
+            $('#about .skills span').text('* 이미지에 마우스를 올려보세요!')
+        }
+    })
     let elm = "section"
     $(elm).each(function (index) {
         $(this).on("mousewheel", function (e) {
