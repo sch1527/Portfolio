@@ -367,7 +367,7 @@ section {
     width: 19.5ch;
     overflow: hidden;
     white-space: nowrap;
-    font-size: 42px;
+    font-size: 36px;
     animation: typing 3s steps(200),
         cursor 1s linear infinite;
     position: relative;
@@ -482,7 +482,7 @@ section {
 }
 
 #about .wrap {
-    top: calc(100px + 32rem);
+    top: calc(100px + 33rem);
     width: 100%;
 }
 
@@ -622,7 +622,137 @@ section {
 #about .btn_close {
     display: none;
 }
+/* 세 번째 섹션 */
+#portfolio .img_wrap {
+    position: relative;
+}
+#portfolio img {
+    width: 100%;
+}
+#portfolio .comment {
+    padding-top: calc(100px + 2rem);
+    text-align: center;
+}
+#portfolio .comment h3 {
+    font-size: 36px;
+    color: var(--main-color);
+}
+#portfolio .slide {
+    padding: 0 5rem;
+    position: relative;
+}
 
+#portfolio .slide ul {
+    display: flex;
+    justify-content: space-between;
+}
+#portfolio .slide ul li:nth-of-type(2) {
+    width: 35%;
+}
+#portfolio .slide ul li:nth-of-type(1),
+#portfolio .slide ul li:nth-of-type(3) {
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+#portfolio .slide ul li:nth-of-type(1) img,
+#portfolio .slide ul li:nth-of-type(3) img {
+    filter: blur(3px);
+}
+#portfolio .slide ul li:nth-of-type(1) strong,
+#portfolio .slide ul li:nth-of-type(1) p,
+#portfolio .slide ul li:nth-of-type(1) a,
+#portfolio .slide ul li:nth-of-type(3) strong,
+#portfolio .slide ul li:nth-of-type(3) p,
+#portfolio .slide ul li:nth-of-type(3) a {
+    display: none;
+}
+#portfolio .slide ul li strong {
+    display: block;
+    text-align: center;
+    font-size: 28px;
+    color: var(--main-color);
+    padding-top: 2rem;
+}
+#portfolio .slide .img_wrap a {
+    position: absolute;
+    bottom: 20px;
+    right: 5rem;
+    font-size: 14px;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+#portfolio .slide .img_wrap a:nth-of-type(2) {
+    right: 5px;
+}
+#portfolio .slide .img_wrap a:hover {
+    color: #3067d4;
+    background-color: white;
+}
+#portfolio .slide ul li div {
+    padding-top: 1rem;
+}
+#portfolio .slide ul li p {
+    text-align: center;
+    padding-top: 1rem;
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+}
+#portfolio .slide ul li span {
+    font-size: 18px;
+}
+#portfolio .prev,
+#portfolio .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    font-size: 3rem;
+    color: white;
+}
+#portfolio .prev {
+    left: 30%;
+}
+#portfolio .next {
+    right: 30%;
+}
+
+/* contact */
+#contact {
+    overflow: hidden;
+}
+#contact .inner {
+    max-width: 1400px;
+    margin: auto;
+
+}
+#contact h3 {
+    font-size: 36px;
+    color: var(--main-color);
+    text-align: center;
+}
+#contact img {
+    width: 5%;
+    padding-right: 1rem;
+}
+#contact .mail {
+    padding-top: calc(100px + 2rem);
+}
+#contact .mail div {
+    padding-top: 1rem;
+}
+#contact .mail a {
+    color: var(--sub-color);
+    font-size: 24px;
+    padding-left: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /* 반응형 */
 @media(max-width:1005px) {
     #header h1 {

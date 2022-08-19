@@ -91,5 +91,25 @@ $(function () {
         $('#header .ham').removeClass('on')
         $('#header .ham_menu').removeClass('on')
     })
-    
+    // 슬라이드
+    let w = $('.slide ul>li').width()
+    $('.next').click(function() {
+        $('.slide ul').not(':animated').animate({
+            marginLeft:-w
+        }, 1000, function() {
+            $('.slide ul>li').eq(0).appendTo('.slide ul')
+            $('.slide ul').css({
+                marginLeft: 0
+            })
+        })
+    })
+    $('.prev').click(function() {
+        $('.slide ul>li').eq(-1).prependTo('.slide ul')
+        $('.slide ul').css({
+            marginLeft: -w
+        })
+        $('.slide ul').not(':animated').animate({
+            marginLeft: 0
+        }, 1000)
+    })
 })
