@@ -37,9 +37,9 @@ $(function () {
         }
     })
     // 윈도우 크기가 변경되었을 때
-    $(window).resize(function() {
+    $(window).resize(function () {
         let wid = $(window).width()
-        // width가 1005이하일 때 텍스트 변경
+        // width가 1005px이하일 때 텍스트 변경
         if (wid <= 1005) {
             $('#about .skills span').text('* 이미지를 클릭해보세요!')
         } else {
@@ -79,37 +79,52 @@ $(function () {
             }, 0)
         })
     })
-    $('#header .ham').click(function() {
+    $('#header .ham').click(function () {
         $(this).toggleClass('on')
         $('#header .ham_menu').toggleClass('on')
     })
-    $('#header .ham_menu .close').click(function() {
+    $('#header .ham_menu .close').click(function () {
         $('#header .ham').toggleClass('on')
         $('#header .ham_menu').toggleClass('on')
     })
-    $('#header .ham_menu a').click(function() {
+    $('#header .ham_menu a').click(function () {
         $('#header .ham').removeClass('on')
         $('#header .ham_menu').removeClass('on')
     })
+
+    // $('#portfolio .slide ul li>div').css({
+    //     filter: 'blur(10px)',
+    //     transform: 'scale(0.6)'
+    // })
+    // $('#portfolio .slide ul li:nth-of-type(2)>div').css({
+    //     filter: 'blur(0px)',
+    //     transform: 'scale(1)'
+    // })
+
     // 슬라이드
     let w = $('.slide ul>li').width()
-    $('.next').click(function() {
+    $('.next').click(function () {
+        $('.slide ul li').removeClass('add')
         $('.slide ul').not(':animated').animate({
-            marginLeft:-w
-        }, 1000, function() {
+            marginLeft: -w
+        }, 1000, function () {
             $('.slide ul>li').eq(0).appendTo('.slide ul')
             $('.slide ul').css({
                 marginLeft: 0
             })
+            $('.slide ul li').eq(1).addClass('add')
         })
     })
-    $('.prev').click(function() {
+    $('.prev').click(function () {
+        $('.slide ul li').removeClass('add')
         $('.slide ul>li').eq(-1).prependTo('.slide ul')
         $('.slide ul').css({
             marginLeft: -w
         })
         $('.slide ul').not(':animated').animate({
             marginLeft: 0
-        }, 1000)
+        }, 1000, function () {
+            $('.slide ul li').eq(1).addClass('add')
+        })
     })
 })
