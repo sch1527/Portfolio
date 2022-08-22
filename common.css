@@ -370,7 +370,7 @@ section {
     overflow: hidden;
     white-space: nowrap;
     font-size: 36px;
-    animation: typing 1.5s steps(100), cursor 1s linear infinite;
+    animation: typing 1.3s steps(100), cursor 1s linear infinite;
     position: relative;
     display: none;
 }
@@ -411,7 +411,7 @@ section {
 #about .name {
     top: calc(100px + 10rem);
     animation: name_ani 0.5s linear;
-    animation-delay: 1500ms;
+    animation-delay: 1200ms;
     animation-fill-mode: forwards;
     left: -50%;
     display: none;
@@ -435,8 +435,8 @@ section {
 
 #about .birth {
     top: calc(100px + 16rem);
-    animation: birth_ani 0.5s linear;
-    animation-delay: 2500ms;
+    animation: birth_ani 1s linear;
+    animation-delay: 1500ms;
     animation-fill-mode: forwards;
     left: -50%;
     display: none;
@@ -459,10 +459,10 @@ section {
 
 #about .life {
     top: calc(100px + 22rem);
-    animation: life_ani 0.5s linear;
-    animation-delay: 4000ms;
+    animation: life_ani 0.8s linear;
+    animation-delay: 2500ms;
     animation-fill-mode: forwards;
-    left: -80%;
+    left: -100%;
     display: none;
 }
 
@@ -482,7 +482,7 @@ section {
 }
 
 #about .life p {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 35px;
 }
 
@@ -515,6 +515,7 @@ section {
 #about .wrap ul li>p {
     text-align: center;
     font-weight: 400;
+    padding-bottom: 1rem;
 }
 
 #about .wrap ul li .skill_wrap p {
@@ -523,8 +524,6 @@ section {
 }
 
 #about .wrap ul li>div {
-    position: absolute;
-    top: 40px;
     width: 100%;
     height: 175px;
     border: 2px solid white;
@@ -538,10 +537,7 @@ section {
 }
 
 #about .wrap ul li .skills>div {
-    top: 0;
-    left: 0;
     position: relative;
-    width: 100%;
     transition: 0.7s;
 }
 
@@ -556,7 +552,7 @@ section {
     top: 0;
     left: 0;
     width: 60%;
-    margin: 1rem;
+    margin: 10px;
     transition: 1s;
 }
 
@@ -618,7 +614,7 @@ section {
 
 #about .wrap ul {
     animation: ul_ani 0.7s linear;
-    animation-delay: 5000ms;
+    animation-delay: 3300ms;
     animation-fill-mode: forwards;
     padding-top: 20rem;
     display: none;
@@ -680,7 +676,7 @@ section {
     justify-content: center;
     align-items: center;
 }
-
+/* 포트폴리오 리스트 추가될 때 화면 유지하기 */
 #portfolio .slide ul li:nth-of-type(4)~li {
     display: none;
 }
@@ -820,6 +816,7 @@ section {
 
 #contact .box_content .profile img {
     width: 100%;
+    box-shadow: 5px 7px 4px #333, -5px -4px 4px #333;
 }
 
 #contact .box_content .profile .phone_num {
@@ -831,6 +828,7 @@ section {
 
 #contact .box_content .profile .phone_num img {
     width: 10%;
+    box-shadow: none;
 }
 
 #contact .box_content .profile .phone_num span {
@@ -865,6 +863,7 @@ section {
 
 #contact .box_content .github img {
     width: 35px;
+    box-shadow: none;
 }
 
 #contact .lower {
@@ -1095,6 +1094,10 @@ section {
     #about .wrap ul li .license,
     #about .wrap ul li .education {
         padding: 1rem;
+    }
+    #about .wrap ul li .license p,
+    #about .wrap ul li .education p {
+        line-height: 1.6;
     }
 }
 

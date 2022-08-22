@@ -39,7 +39,7 @@ $(function () {
     // 윈도우 크기가 변경되었을 때
     $(window).resize(function () {
         let wid = $(window).width()
-        // width가 1005px이하일 때 텍스트 변경
+        // width가 1005px이하일 때 설명 텍스트 변경
         if (wid <= 1005) {
             $('#about .skills span').text('* 이미지를 클릭해보세요!')
         } else {
@@ -92,18 +92,13 @@ $(function () {
         $('#header .ham_menu').removeClass('on')
     })
 
-    // $('#portfolio .slide ul li>div').css({
-    //     filter: 'blur(10px)',
-    //     transform: 'scale(0.6)'
-    // })
-    // $('#portfolio .slide ul li:nth-of-type(2)>div').css({
-    //     filter: 'blur(0px)',
-    //     transform: 'scale(1)'
-    // })
-
     // 슬라이드
     let w = $('.slide ul>li').width()
     $('.next').click(function () {
+        // 윈도우 화면크기가 변경했을 때 슬라이드 정상작동하게 하기
+        if($(window).resize()) {
+            w = $('.slide ul>li').width()
+        }
         $('.slide ul li').removeClass('add')
         $('.slide ul').not(':animated').animate({
             marginLeft: -w
@@ -116,6 +111,9 @@ $(function () {
         })
     })
     $('.prev').click(function () {
+        if($(window).resize()) {
+            w = $('.slide ul>li').width()
+        }
         $('.slide ul li').removeClass('add')
         $('.slide ul>li').eq(-1).prependTo('.slide ul')
         $('.slide ul').css({
