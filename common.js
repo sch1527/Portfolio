@@ -95,10 +95,12 @@ $(function () {
     // 슬라이드
     let w = $('.slide ul>li').width()
     $('.next').click(function () {
+
         // 윈도우 화면크기가 변경했을 때 슬라이드 정상작동하게 하기
         if($(window).resize()) {
             w = $('.slide ul>li').width()
         }
+        
         $('.slide ul li').removeClass('add')
         $('.slide ul').not(':animated').animate({
             marginLeft: -w

@@ -31,7 +31,7 @@ body {
 
 a {
     text-decoration: none;
-    color: white;
+    color: var(--main-color);
 }
 
 :root {
@@ -366,7 +366,7 @@ section {
 }
 
 #about h3 {
-    width: 19.5ch;
+    width: 14ch;
     overflow: hidden;
     white-space: nowrap;
     font-size: 36px;
@@ -436,7 +436,7 @@ section {
 #about .birth {
     top: calc(100px + 16rem);
     animation: birth_ani 1s linear;
-    animation-delay: 1500ms;
+    animation-delay: 1300ms;
     animation-fill-mode: forwards;
     left: -50%;
     display: none;
@@ -460,7 +460,7 @@ section {
 #about .life {
     top: calc(100px + 22rem);
     animation: life_ani 0.8s linear;
-    animation-delay: 2500ms;
+    animation-delay: 2200ms;
     animation-fill-mode: forwards;
     left: -100%;
     display: none;
@@ -614,7 +614,7 @@ section {
 
 #about .wrap ul {
     animation: ul_ani 0.7s linear;
-    animation-delay: 3300ms;
+    animation-delay: 2700ms;
     animation-fill-mode: forwards;
     padding-top: 20rem;
     display: none;
@@ -661,8 +661,8 @@ section {
 #portfolio .slide {
     position: relative;
     overflow: hidden;
-    padding-top: 50px;
     width: 100%;
+    padding-top: 1rem;
 }
 
 #portfolio .slide ul {
@@ -699,22 +699,22 @@ section {
     text-align: center;
     font-size: 28px;
     color: var(--main-color);
-    padding-top: 2rem;
+    padding-top: 0.7rem;
 }
+
 
 #portfolio .slide .img_wrap a {
     position: absolute;
     bottom: 20px;
-    right: 5rem;
+    right: 4.5rem;
     font-size: 14px;
     padding: 5px;
     border: 1px solid white;
     border-radius: 10px;
     transition: 0.5s;
 }
-
 #portfolio .slide .img_wrap a:nth-of-type(2) {
-    right: 5px;
+    right: 0;
 }
 
 #portfolio .slide .img_wrap a:hover {
@@ -722,9 +722,6 @@ section {
     background-color: white;
 }
 
-#portfolio .slide ul li div {
-    padding-top: 1rem;
-}
 
 #portfolio .slide ul li p {
     text-align: center;
@@ -781,7 +778,7 @@ section {
 }
 
 #contact .mail {
-    padding-top: calc(100px + 2rem);
+    padding-top: calc(100px + 3rem);
 }
 
 #contact .mail div {
@@ -1050,7 +1047,7 @@ section {
     }
 
     #about .wrap {
-        top: calc(100px + 20rem) !important;
+        top: calc(100px + 20rem);
         width: 117%;
     }
 
@@ -1105,6 +1102,12 @@ section {
     .sec1 .comment {
         width: 120%;
     }
+    #about .wrap {
+        top: calc(100% + 25rem);
+    }
+    #about .wrap ul li .skills span {
+        top: 100%;
+    }
 }
 
 @media (max-width: 1450px) {
@@ -1132,10 +1135,6 @@ section {
     #about .birth span,
     #about .life p {
         font-size: 18px;
-    }
-
-    #about .wrap {
-        top: calc(100px + 30rem);
     }
 
     #about .wrap ul {
