@@ -36,16 +36,7 @@ $(function () {
             $('#about .wrap ul').removeClass('on')
         }
     })
-    // 윈도우 크기가 변경되었을 때
-    $(window).resize(function () {
-        let wid = $(window).width()
-        // width가 1005px이하일 때 설명 텍스트 변경
-        if (wid <= 1005) {
-            $('#about .skills span').text('* 이미지를 클릭해보세요!')
-        } else {
-            $('#about .skills span').text('* 이미지에 마우스를 올려보세요!')
-        }
-    })
+
     let elm = "section"
     $(elm).each(function (index) {
         $(this).on("mousewheel", function (e) {
@@ -98,7 +89,7 @@ $(function () {
     let w = $('.slide ul>li').width()
     let ww = $(window).width()
     // 현재 윈도우의 크기
-    $(window).resize(function() {
+    $(window).resize(function () {
         ww = $(window).width()
         console.log(ww)
     })

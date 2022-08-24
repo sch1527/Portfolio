@@ -367,7 +367,7 @@ section {
 }
 
 #about h3 {
-    width: 14ch;
+    width: 13.7ch;
     overflow: hidden;
     white-space: nowrap;
     font-size: 36px;
@@ -1175,6 +1175,15 @@ section {
     }
     #portfolio .slide ul li {
         width: calc(100% / 4);
+    }
+    #portfolio .slide ul li.add>div {
+        transform: scale(0.6);
+    }
+    #portfolio .next {
+        right: 15%;
+    }
+    #portfolio .prev {
+        left: 15%;
     }
     #contact .box_content .comment p {
         font-size: 18px;
