@@ -343,6 +343,7 @@ section {
 
 #about .inner {
     max-width: 1400px;
+    height: 100%;
     margin: auto;
     position: relative;
 }
@@ -350,7 +351,7 @@ section {
 #about .inner::before {
     content: "";
     position: absolute;
-    top: calc(100px + 8rem);
+    top: calc(100px + 15%);
     width: 100%;
     border-bottom: 1px dashed white;
 }
@@ -360,7 +361,7 @@ section {
 }
 
 #about .title {
-    top: calc(100px + 3rem);
+    top: calc(100px + 5%);
     left: 50%;
     transform: translateX(-50%);
 }
@@ -409,7 +410,7 @@ section {
 }
 
 #about .name {
-    top: calc(100px + 10rem);
+    top: calc(100px + 20%);
     animation: name_ani 0.5s linear;
     animation-delay: 1200ms;
     animation-fill-mode: forwards;
@@ -434,7 +435,7 @@ section {
 }
 
 #about .birth {
-    top: calc(100px + 16rem);
+    top: calc(100px + 30%);
     animation: birth_ani 1s linear;
     animation-delay: 1300ms;
     animation-fill-mode: forwards;
@@ -458,7 +459,7 @@ section {
 }
 
 #about .life {
-    top: calc(100px + 22rem);
+    top: calc(100px + 40%);
     animation: life_ani 0.8s linear;
     animation-delay: 2200ms;
     animation-fill-mode: forwards;
@@ -487,7 +488,7 @@ section {
 }
 
 #about .wrap {
-    top: calc(100px + 33rem);
+    top: calc(100px + 60%);
     width: 100%;
 }
 
@@ -581,7 +582,6 @@ section {
     position: absolute;
     font-size: 14px;
     font-weight: 300;
-    display: block;
     width: 100%;
     cursor: default;
     text-align: center;
@@ -676,12 +676,12 @@ section {
     justify-content: center;
     align-items: center;
 }
+
 /* 포트폴리오 리스트 추가될 때 화면 유지하기 */
 #portfolio .slide ul li:nth-of-type(4)~li {
     display: none;
 }
 
-/* 강사수정  */
 #portfolio .slide ul li>div {
     width: 80%;
     filter: blur(10px);
@@ -713,6 +713,7 @@ section {
     border-radius: 10px;
     transition: 0.5s;
 }
+
 #portfolio .slide .img_wrap a:nth-of-type(2) {
     right: 0;
 }
@@ -879,6 +880,75 @@ section {
 }
 
 /* 반응형 */
+@media (max-width: 1500px) {
+    #contact .box_content {
+        max-width: 1200px;
+        margin: 2rem 3rem 6rem auto;
+    }
+
+    #contact .box_content .comment span {
+        font-size: 30px;
+    }
+
+    #contact .box_content .comment p {
+        padding-right: 2rem;
+        font-size: 22px;
+    }
+
+    .sec1 .pagination {
+        right: 1rem;
+    }
+    #contact .box_content .profile .phone_num img {
+        width: 15%;
+    }
+}
+
+@media (max-width: 1450px) {
+    .inner {
+        padding: 0 2rem;
+    }
+
+    #about h3 {
+        font-size: 36px;
+    }
+
+    #about .wrap ul li>p {
+        font-size: 18px;
+    }
+
+    #about .name,
+    #about .birth,
+    #about .life {
+        padding-left: 2rem;
+    }
+
+    #about .name p,
+    #about .name span,
+    #about .birth p,
+    #about .birth span,
+    #about .life p {
+        font-size: 18px;
+    }
+
+    #about .wrap ul {
+        padding-top: 25rem;
+        padding-right: 3rem;
+    }
+
+    #about .wrap ul li .license p,
+    #about .wrap ul li .education p {
+        font-size: 16px;
+    }
+    #portfolio .slide .img_wrap>div{
+        padding-top: 1rem;
+        display: flex;
+        justify-content: flex-end;    
+    }
+    #portfolio .slide .img_wrap>div a {
+        position: static;
+        margin-left: 10px;
+    }
+}
 @media (max-width: 1005px) {
     #header h1 {
         padding: 1.7rem;
@@ -1021,19 +1091,19 @@ section {
     }
 
     #about .name {
-        top: calc(100px + 7rem);
+        top: calc(100px + 15%);
         left: 2rem;
         padding-left: 0 !important;
     }
 
     #about .birth {
-        top: calc(100px + 7rem);
+        top: calc(100px + 15%);
         left: 50%;
         transform: translateX(-50%);
     }
 
     #about .life {
-        top: calc(100px + 12rem);
+        top: calc(100px + 25%);
         left: 2rem;
         padding-left: 0 !important;
     }
@@ -1047,7 +1117,7 @@ section {
     }
 
     #about .wrap {
-        top: calc(100px + 20rem);
+        top: calc(100px + 50%);
         width: 117%;
     }
 
@@ -1092,76 +1162,33 @@ section {
     #about .wrap ul li .education {
         padding: 1rem;
     }
+
     #about .wrap ul li .license p,
     #about .wrap ul li .education p {
         line-height: 1.6;
     }
+    #about .wrap ul li .skills span {
+        display: none;
+    }
+    #portfolio .slide ul {
+        width: 400%;
+    }
+    #portfolio .slide ul li {
+        width: calc(100% / 4);
+    }
+    #contact .box_content .comment p {
+        font-size: 18px;
+    }
+    #contact .box_content .profile .phone_num img {
+        width: 20%;
+    }
 }
-
 @media (max-width: 672px) {
     .sec1 .comment {
         width: 120%;
     }
-    #about .wrap {
-        top: calc(100% + 25rem);
-    }
+
     #about .wrap ul li .skills span {
         top: 100%;
-    }
-}
-
-@media (max-width: 1450px) {
-    .inner {
-        padding: 0 2rem;
-    }
-
-    #about h3 {
-        font-size: 36px;
-    }
-
-    #about .wrap ul li>p {
-        font-size: 18px;
-    }
-
-    #about .name,
-    #about .birth,
-    #about .life {
-        padding-left: 2rem;
-    }
-
-    #about .name p,
-    #about .name span,
-    #about .birth p,
-    #about .birth span,
-    #about .life p {
-        font-size: 18px;
-    }
-
-    #about .wrap ul {
-        padding-top: 25rem;
-        padding-right: 3rem;
-    }
-
-    #about .wrap ul li .license p,
-    #about .wrap ul li .education p {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 1500px) {
-    #contact .box_content {
-        max-width: 1200px;
-        margin: 2rem 3rem 6rem auto;
-    }
-    #contact .box_content .comment span {
-        font-size: 30px;
-    }
-    #contact .box_content .comment p {
-        padding-right: 2rem;
-        font-size: 22px;
-    }
-
-    .sec1 .pagination {
-        right: 1rem;
     }
 }
