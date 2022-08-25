@@ -91,7 +91,6 @@ $(function () {
     // 현재 윈도우의 크기
     $(window).resize(function () {
         ww = $(window).width()
-        console.log(ww)
     })
     // pc버전 슬라이드
     if (ww > 1005) {

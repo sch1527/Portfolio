@@ -382,7 +382,7 @@ section {
 
 #about p,
 #about span {
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 300;
 }
 
@@ -410,7 +410,7 @@ section {
 }
 
 #about .name {
-    top: calc(100px + 20%);
+    top: calc(100px + 18%);
     animation: name_ani 0.5s linear;
     animation-delay: 1200ms;
     animation-fill-mode: forwards;
@@ -435,7 +435,7 @@ section {
 }
 
 #about .birth {
-    top: calc(100px + 30%);
+    top: calc(100px + 27%);
     animation: birth_ani 1s linear;
     animation-delay: 1300ms;
     animation-fill-mode: forwards;
@@ -459,7 +459,7 @@ section {
 }
 
 #about .life {
-    top: calc(100px + 40%);
+    top: calc(100px + 37%);
     animation: life_ani 0.8s linear;
     animation-delay: 2200ms;
     animation-fill-mode: forwards;
@@ -488,7 +488,7 @@ section {
 }
 
 #about .wrap {
-    top: calc(100px + 60%);
+    top: calc(100px + 55%);
     width: 100%;
 }
 
@@ -662,7 +662,7 @@ section {
     position: relative;
     overflow: hidden;
     width: 100%;
-    padding-top: 1rem;
+    padding-top: 4rem;
 }
 
 #portfolio .slide ul {
@@ -857,6 +857,7 @@ section {
 #contact .box_content .github {
     display: flex;
     justify-content: center;
+    padding-top: 1rem;
 }
 
 #contact .box_content .github img {
@@ -938,6 +939,9 @@ section {
     #about .wrap ul li .license p,
     #about .wrap ul li .education p {
         font-size: 16px;
+    }
+    #portfolio .slide {
+        padding-top: 1rem;
     }
     #portfolio .slide .img_wrap>div{
         padding-top: 1rem;
@@ -1108,6 +1112,10 @@ section {
         padding-left: 0 !important;
     }
 
+    #about .life p {
+        font-size: 16px;
+    }
+
     #about .title {
         top: calc(100px + 2rem);
     }
@@ -1143,6 +1151,9 @@ section {
     #about .wrap ul li:nth-of-type(3) {
         width: 40%;
     }
+    #about .wrap ul li div p {
+        font-size: 14px !important;
+    }
 
     #about .wrap ul li .skills img {
         width: 50%;
@@ -1170,17 +1181,37 @@ section {
     #about .wrap ul li .skills span {
         display: none;
     }
+    #portfolio {
+        position: relative;
+    }
+    #portfolio .slide {
+        position: absolute;
+        top: 10%;
+    }
     #portfolio .slide ul {
         width: 400%;
     }
     #portfolio .slide ul li.add>div {
         transform: scale(0.6);
     }
+    #portfolio .prev,
+    #portfolio .next {
+        top: 40%;
+    }
     #portfolio .next {
         right: 15%;
     }
     #portfolio .prev {
         left: 15%;
+    }
+    #contact .mail h3 {
+        font-size: 24px;
+    }
+    #contact .mail strong {
+        font-size: 20px;
+    }
+    #contact .box_content .comment span {
+        font-size: 24px;
     }
     #contact .box_content .comment p {
         font-size: 18px;
