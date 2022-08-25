@@ -92,78 +92,37 @@ $(function () {
     $(window).resize(function () {
         ww = $(window).width()
     })
-    // pc버전 슬라이드
-    if (ww > 1005) {
-        $('.slide ul li').eq(1).addClass('add')
-        $('.next').click(function () {
+    // 슬라이드
+    $('.next').click(function () {
+        // 윈도우 화면크기가 변경했을 때 슬라이드 정상작동하게 하기
+        if ($(window).resize()) {
+            w = $('.slide ul>li').width()
+        }
 
-            // 윈도우 화면크기가 변경했을 때 슬라이드 정상작동하게 하기
-            if ($(window).resize()) {
-                w = $('.slide ul>li').width()
-            }
-
-            $('.slide ul li').removeClass('add')
-            $('.slide ul').not(':animated').animate({
-                marginLeft: -w
-            }, 1000, function () {
-                $('.slide ul>li').eq(0).appendTo('.slide ul')
-                $('.slide ul').css({
-                    marginLeft: 0
-                })
-                $('.slide ul li').eq(1).addClass('add')
-            })
-        })
-        $('.prev').click(function () {
-            if ($(window).resize()) {
-                w = $('.slide ul>li').width()
-            }
-            $('.slide ul li').removeClass('add')
-            $('.slide ul>li').eq(-1).prependTo('.slide ul')
+        $('.slide ul li').removeClass('add')
+        $('.slide ul').not(':animated').animate({
+            marginLeft: -w
+        }, 1000, function () {
+            $('.slide ul>li').eq(0).appendTo('.slide ul')
             $('.slide ul').css({
-                marginLeft: -w
-            })
-            $('.slide ul').not(':animated').animate({
                 marginLeft: 0
-            }, 1000, function () {
-                $('.slide ul li').eq(1).addClass('add')
             })
+            $('.slide ul li').eq(1).addClass('add')
         })
-    }
-    // 모바일 버전 슬라이드
-    else {
-        $('.slide ul li').eq(0).addClass('add')
-        $('.next').click(function () {
-
-            // 윈도우 화면크기가 변경했을 때 슬라이드 정상작동하게 하기
-            if ($(window).resize()) {
-                w = $('.slide ul>li').width()
-            }
-
-            $('.slide ul li').removeClass('add')
-            $('.slide ul').not(':animated').animate({
-                marginLeft: -w
-            }, 1000, function () {
-                $('.slide ul>li').eq(0).appendTo('.slide ul')
-                $('.slide ul').css({
-                    marginLeft: 0
-                })
-                $('.slide ul li').eq(0).addClass('add')
-            })
+    })
+    $('.prev').click(function () {
+        if ($(window).resize()) {
+            w = $('.slide ul>li').width()
+        }
+        $('.slide ul li').removeClass('add')
+        $('.slide ul>li').eq(-1).prependTo('.slide ul')
+        $('.slide ul').css({
+            marginLeft: -w
         })
-        $('.prev').click(function () {
-            if ($(window).resize()) {
-                w = $('.slide ul>li').width()
-            }
-            $('.slide ul li').removeClass('add')
-            $('.slide ul>li').eq(-1).prependTo('.slide ul')
-            $('.slide ul').css({
-                marginLeft: -w
-            })
-            $('.slide ul').not(':animated').animate({
-                marginLeft: 0
-            }, 1000, function () {
-                $('.slide ul li').eq(0).addClass('add')
-            })
+        $('.slide ul').not(':animated').animate({
+            marginLeft: 0
+        }, 1000, function () {
+            $('.slide ul li').eq(1).addClass('add')
         })
-    }
+    })
 })

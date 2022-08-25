@@ -663,6 +663,7 @@ section {
     overflow: hidden;
     width: 100%;
     padding-top: 4rem;
+    white-space: nowrap;
 }
 
 #portfolio .slide ul {
@@ -899,6 +900,7 @@ section {
     .sec1 .pagination {
         right: 1rem;
     }
+
     #contact .box_content .profile .phone_num img {
         width: 15%;
     }
@@ -906,7 +908,7 @@ section {
 
 @media (max-width: 1450px) {
     .inner {
-        padding: 0 2rem;
+        padding: 0 1rem;
     }
 
     #about h3 {
@@ -940,19 +942,23 @@ section {
     #about .wrap ul li .education p {
         font-size: 16px;
     }
+
     #portfolio .slide {
         padding-top: 1rem;
     }
-    #portfolio .slide .img_wrap>div{
+
+    #portfolio .slide .img_wrap>div {
         padding-top: 1rem;
         display: flex;
-        justify-content: flex-end;    
+        justify-content: flex-end;
     }
+
     #portfolio .slide .img_wrap>div a {
         position: static;
         margin-left: 10px;
     }
 }
+
 @media (max-width: 1005px) {
     #header h1 {
         padding: 1.7rem;
@@ -1151,6 +1157,7 @@ section {
     #about .wrap ul li:nth-of-type(3) {
         width: 40%;
     }
+
     #about .wrap ul li div p {
         font-size: 14px !important;
     }
@@ -1178,48 +1185,70 @@ section {
     #about .wrap ul li .education p {
         line-height: 1.6;
     }
+
     #about .wrap ul li .skills span {
         display: none;
     }
+
     #portfolio {
         position: relative;
     }
+
+    #portfolio .comment h3 {
+        font-size: 24px;
+    }
+
     #portfolio .slide {
         position: absolute;
         top: 10%;
     }
+
     #portfolio .slide ul {
         width: 400%;
     }
+
     #portfolio .slide ul li.add>div {
         transform: scale(0.6);
     }
+
+    #portfolio .slide ul li>div {
+        margin-right: 200vw;
+    }
+
     #portfolio .prev,
     #portfolio .next {
         top: 40%;
     }
+
     #portfolio .next {
         right: 15%;
     }
+
     #portfolio .prev {
         left: 15%;
     }
+
     #contact .mail h3 {
         font-size: 24px;
     }
+
     #contact .mail strong {
         font-size: 20px;
     }
+
     #contact .box_content .comment span {
         font-size: 24px;
     }
+
     #contact .box_content .comment p {
         font-size: 18px;
     }
+
     #contact .box_content .profile .phone_num img {
         width: 20%;
     }
 }
+
 @media (max-width: 672px) {
     .sec1 .comment {
         width: 120%;
@@ -1227,5 +1256,39 @@ section {
 
     #about .wrap ul li .skills span {
         top: 100%;
+    }
+
+    #contact .mail {
+        padding-top: calc(100px + 2rem);
+    }
+
+    #contact .mail div {
+        padding: 1rem 0;
+    }
+
+    #contact .box_content {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    #contact .box_content .comment {
+        padding-top: 1rem;
+    }
+
+    #contact .box_content .comment p {
+        padding: 1rem 0;
+        text-align: center;
+    }
+
+    #contact .box_content .profile {
+        width: 50%;
+        padding: 2rem 0 0 0;
+    }
+
+    #contact .lower {
+        position: static;
+        padding-top: 1.5rem;
+        transform: none;
     }
 }
