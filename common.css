@@ -191,7 +191,7 @@ section {
     position: absolute;
 }
 
-.sec1 .comment {
+.sec1 .comment_wrap {
     font-size: 36px;
     top: 50%;
     left: 50%;
@@ -1089,11 +1089,18 @@ section {
             left: 30%;
         }
     }
-
+    #about .inner>* {
+        position: static;
+    }
     #about .inner::before {
         top: calc(100px + 6rem);
     }
-
+    #about .title {
+        padding-top: calc(100px + 2rem);
+        display: flex;
+        justify-content: center;
+        transform: none;
+    }
     #about .name,
     #about .birth,
     #about .life {
@@ -1101,15 +1108,14 @@ section {
     }
 
     #about .name {
-        top: calc(100px + 15%);
-        left: 2rem;
-        padding-left: 0 !important;
+        padding-top: 2rem;
     }
 
     #about .birth {
-        top: calc(100px + 15%);
-        left: 50%;
-        transform: translateX(-50%);
+        transform: none;
+    }
+    #about .name, #about .birth, #about .life {
+        padding-left: 0;
     }
 
     #about .life {
@@ -1200,7 +1206,7 @@ section {
 
     #portfolio .slide {
         position: absolute;
-        top: 10%;
+        top: 15%;
     }
 
     #portfolio .slide ul {
@@ -1208,11 +1214,12 @@ section {
     }
 
     #portfolio .slide ul li.add>div {
-        transform: scale(0.6);
+        transform: scale(0.8);
     }
 
     #portfolio .slide ul li>div {
         margin-right: 200vw;
+        transform: scale(0.6);
     }
 
     #portfolio .prev,
@@ -1221,11 +1228,11 @@ section {
     }
 
     #portfolio .next {
-        right: 15%;
+        right: 10%;
     }
 
     #portfolio .prev {
-        left: 15%;
+        left: 10%;
     }
 
     #contact .mail h3 {
@@ -1250,10 +1257,60 @@ section {
 }
 
 @media (max-width: 672px) {
-    .sec1 .comment {
-        width: 120%;
+    .sec1 .comment_wrap {
+        position: static;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        transform: none;
     }
-
+    .sec1 .comment {
+        transform: none;
+        font-size: 1.3rem;
+    }
+    .sec1 .pagination {
+        top: 40%;
+    }
+    .sec1 .circle_box .circle:nth-child(1) {
+        top: 0;
+    }
+    @keyframes move_circle1 {
+        0% {
+            left: 10%;
+        }
+    
+        100% {
+            transform: rotate(360deg);
+            left: 80%;
+        }
+    }
+    @keyframes move_circle2 {
+        0% {
+            top: 200%;
+            left: -80%;
+        }
+    
+        25% {
+            top: 180%;
+            left: -60%;
+        }
+    
+        50% {
+            top: 160%;
+            left: -40%;
+        }
+    
+        75% {
+            top: 140%;
+            left: -20%;
+        }
+    
+        100% {
+            top: 120%;
+            left: 0;
+        }
+    }
     #about .wrap ul li .skills span {
         top: 100%;
     }
