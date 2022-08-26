@@ -1138,18 +1138,18 @@ section {
 
     #about .wrap {
         top: calc(100px + 50%);
-        width: 117%;
+        /* width: 117%; */
     }
 
     #about .wrap ul {
-        width: 75%;
+        /* width: 75%; */
         padding-top: 0 !important;
         padding-right: 0 !important;
         animation: none;
     }
 
     #about .wrap ul li {
-        height: 250px;
+        /* height: 250px; */
     }
 
     #about .wrap ul li:nth-of-type(1) {
