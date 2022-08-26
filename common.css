@@ -1138,18 +1138,12 @@ section {
 
     #about .wrap {
         top: calc(100px + 50%);
-        /* width: 117%; */
     }
 
     #about .wrap ul {
-        /* width: 75%; */
         padding-top: 0 !important;
         padding-right: 0 !important;
         animation: none;
-    }
-
-    #about .wrap ul li {
-        /* height: 250px; */
     }
 
     #about .wrap ul li:nth-of-type(1) {
@@ -1311,10 +1305,43 @@ section {
             left: 0;
         }
     }
+    #about,
+    #contact {
+        overflow-y: scroll;
+    }
+    #about::-webkit-scrollbar,
+    #contact::-webkit-scrollbar {
+        width: 8px;
+    }
+    #about::-webkit-scrollbar-thumb,
+    #contact::-webkit-scrollbar-thumb {
+        height: 30%;
+        background: #217af4;
+        border-radius: 10px;
+    }
+    #about::-webkit-scrollbar-track,
+    #contact::-webkit-scrollbar-track {
+        background: rgba(33, 122, 244, .1);
+    }
+    #about .wrap ul.on {
+        flex-direction: column;
+    }
+    #about .wrap ul li {
+        width: 100% !important;
+        padding-top: 1rem;
+    }
+    #about .wrap ul li .skills>div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #about .wrap ul li .skills img {
+        width: 40%;
+        position: static;
+    }
     #about .wrap ul li .skills span {
         top: 100%;
     }
-
     #contact .mail {
         padding-top: calc(100px + 2rem);
     }
