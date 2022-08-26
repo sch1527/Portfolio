@@ -1,6 +1,9 @@
 @charset "utf-8";
+
+/* 노토산스 폰트 */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap");
 
+/* 이사만루체 폰트 */
 @font-face {
     font-family: "GongGothicMedium";
     src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff") format("woff");
@@ -1321,7 +1324,7 @@ section {
     }
     #about::-webkit-scrollbar-track,
     #contact::-webkit-scrollbar-track {
-        background: rgba(33, 122, 244, .1);
+        background: rgba(255, 255, 255, 0.8);
     }
     #about .wrap ul.on {
         flex-direction: column;
