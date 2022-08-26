@@ -1311,13 +1311,13 @@ section {
     }
     #about::-webkit-scrollbar,
     #contact::-webkit-scrollbar {
-        width: 8px;
+        width: 12px;
     }
     #about::-webkit-scrollbar-thumb,
     #contact::-webkit-scrollbar-thumb {
         height: 30%;
         background: #217af4;
-        border-radius: 10px;
+        border-radius: 12px;
     }
     #about::-webkit-scrollbar-track,
     #contact::-webkit-scrollbar-track {
@@ -1372,7 +1372,7 @@ section {
 
     #contact .lower {
         position: static;
-        padding-top: 1.5rem;
+        padding: 1.5rem 0;
         transform: none;
     }
 }
