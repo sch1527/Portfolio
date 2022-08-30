@@ -1336,13 +1336,16 @@ section {
         width: 100% !important;
         padding-top: 1rem;
     }
+    #about .wrap ul li > div {
+        height: 200px;
+    }
     #about .wrap ul li .skills>div {
         display: flex;
         justify-content: center;
         align-items: center;
     }
     #about .wrap ul li .skills img {
-        width: 40%;
+        width: 30%;
         position: static;
     }
     #about .wrap ul li .skills span {
