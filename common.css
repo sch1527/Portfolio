@@ -201,7 +201,9 @@ section {
     transform: translate(-50%, -50%);
     text-align: center;
     line-height: 1.6;
+    z-index: 10;
 }
+
 
 .sec1 .comment .slow {
     color: #f6f282;
@@ -370,7 +372,7 @@ section {
 }
 
 #about h3 {
-    width: 13.7ch;
+    width: 22.8ch;
     overflow: hidden;
     white-space: nowrap;
     font-size: 36px;
@@ -991,6 +993,7 @@ section {
         height: 100vh;
         transition: 1.1s;
         background-color: #3067d4;
+        z-index: 110;
     }
 
     #header .ham_menu.on {
@@ -1218,18 +1221,20 @@ section {
         margin-right: 200vw;
         transform: scale(0.6);
     }
-
+    #portfolio .slide ul li strong {
+        padding-top: 2rem;
+    }
     #portfolio .prev,
     #portfolio .next {
         top: 40%;
     }
 
     #portfolio .next {
-        right: 10%;
+        right: 15%;
     }
 
     #portfolio .prev {
-        left: 10%;
+        left: 15%;
     }
 
     #contact .mail h3 {
@@ -1331,13 +1336,14 @@ section {
     }
     #about .wrap ul.on {
         flex-direction: column;
+        padding-bottom: 2rem;
     }
     #about .wrap ul li {
         width: 100% !important;
         padding-top: 1rem;
     }
-    #about .wrap ul li > div {
-        height: 200px;
+    #about .wrap ul li .skills {
+        height: 250px;
     }
     #about .wrap ul li .skills>div {
         display: flex;
@@ -1350,6 +1356,13 @@ section {
     }
     #about .wrap ul li .skills span {
         top: 100%;
+    }
+    #portfolio .next {
+        right: 8%;
+    }
+
+    #portfolio .prev {
+        left: 8%;
     }
     #contact .mail {
         padding-top: calc(100px + 2rem);
