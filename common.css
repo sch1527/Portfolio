@@ -1147,7 +1147,7 @@ section {
     }
 
     #about .wrap ul {
-        padding-top: 0 !important;
+        padding-top: 1rem !important;
         padding-right: 0 !important;
         animation: none;
     }
@@ -1334,6 +1334,10 @@ section {
     #about .name {
         padding-top: 3rem;
     }
+    #about .name p,
+    #about .birth p {
+        display: inline;
+    }
     #about .wrap ul.on {
         flex-direction: column;
         padding-bottom: 2rem;
@@ -1343,7 +1347,9 @@ section {
         padding-top: 1rem;
     }
     #about .wrap ul li .skills {
-        height: 250px;
+        height: auto;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: none;
     }
     #about .wrap ul li .skills>div {
         display: flex;
@@ -1351,7 +1357,7 @@ section {
         align-items: center;
     }
     #about .wrap ul li .skills img {
-        width: 30%;
+        width: 50%;
         position: static;
     }
     #about .wrap ul li .skills span {
@@ -1396,5 +1402,8 @@ section {
         position: static;
         padding: 1.5rem 0;
         transform: none;
+    }
+    #contact .mail img {
+        width: 10%;
     }
 }

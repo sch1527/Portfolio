@@ -38,38 +38,41 @@ $(function () {
     })
 
     let elm = "section"
-    $(elm).each(function (index) {
-        $(this).on("mousewheel", function (e) {
-            e.preventDefault()
-            let delta = 0
-
-            if (event.wheelDelta) {
-                delta = event.wheelDelta
-            }
-            let moveTop = $(window).scrollTop()
-            let elmSelecter = $(elm).eq(index)
-
-            // 마우스 휠을 위에서 아래로 내렸을 때
-            if (delta < 0) {
-                if ($(elmSelecter).next('section') != undefined) {
-                    try {
-                        moveTop = $(elmSelecter).next('section').offset().top
-                    } catch (e) {}
+    let wa = $(window).width()
+    if(wa > 672 ) {
+        $(elm).each(function (index) {
+            $(this).on("mousewheel", function (e) {
+                e.preventDefault()
+                let delta = 0
+    
+                if (event.wheelDelta) {
+                    delta = event.wheelDelta
                 }
-                // 마우스 휠을 아래에서 위로 올렸을 때
-            } else {
-                if ($(elmSelecter).prev('section') != undefined) {
-                    try {
-                        moveTop = $(elmSelecter).prev('section').offset().top
-                    } catch (e) {}
+                let moveTop = $(window).scrollTop()
+                let elmSelecter = $(elm).eq(index)
+    
+                // 마우스 휠을 위에서 아래로 내렸을 때
+                if (delta < 0) {
+                    if ($(elmSelecter).next('section') != undefined) {
+                        try {
+                            moveTop = $(elmSelecter).next('section').offset().top
+                        } catch (e) {}
+                    }
+                    // 마우스 휠을 아래에서 위로 올렸을 때
+                } else {
+                    if ($(elmSelecter).prev('section') != undefined) {
+                        try {
+                            moveTop = $(elmSelecter).prev('section').offset().top
+                        } catch (e) {}
+                    }
                 }
-            }
-            // 화면 이동
-            $('html, body').stop().animate({
-                scrollTop: moveTop + 'px'
-            }, 0)
+                // 화면 이동
+                $('html, body').stop().animate({
+                    scrollTop: moveTop + 'px'
+                }, 0)
+            })
         })
-    })
+    }
     $('#header .ham').click(function () {
         $(this).toggleClass('on')
         $('#header .ham_menu').toggleClass('on')
