@@ -800,6 +800,7 @@ section {
     font-size: 3rem;
     color: white;
     cursor: pointer;
+    padding: 1rem;
 }
 
 #portfolio .prev {
@@ -1353,9 +1354,6 @@ section {
     }
     #about .name {
         padding-top: 3rem;
-    }
-    #about * {
-        display: block;
     }
     #about .title h3 {
         font-size: 24px;
