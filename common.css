@@ -669,7 +669,7 @@ section {
     animation: ul_ani 0.7s linear;
     animation-delay: 2700ms;
     animation-fill-mode: forwards;
-    padding-top: 20rem;
+    padding-top: 25rem;
     display: none;
 }
 
