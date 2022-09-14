@@ -271,7 +271,7 @@ section {
     top: -40%;
     left: 20%;
     border-radius: 50%;
-    animation: move_circle2 30s linear infinite;
+    animation: move_circle2 20s linear infinite;
 }
 
 @keyframes move_circle2 {
@@ -326,7 +326,7 @@ section {
         left: -20%;
     }
     100% {
-        left: 2000%;
+        left: 1000%;
     }
 }
 
@@ -1093,6 +1093,10 @@ section {
         font-size: 12px;
     }
 
+    .sec1 .scroll_down a::before {
+        height: 25px;
+    }
+
     .sec1 .circle_box .circle:nth-child(1) {
         width: 75%;
         height: 75%;
@@ -1287,6 +1291,9 @@ section {
     #contact .box_content .profile .phone_num img {
         width: 20%;
     }
+    #contact .mail img {
+        width: 8%;
+    }
 }
 
 @media (max-width: 672px) {
@@ -1333,6 +1340,15 @@ section {
             top: 120%;
             left: 0;
         }
+    }
+    .sec1 .scroll_down {
+        bottom: 2.5rem;
+    }
+    .sec1 .scroll_down a {
+        font-size: 10px;
+    }
+    .sec1 .scroll_down a::before {
+        height: 20px;
     }
     #about,
     #contact {
